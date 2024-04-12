@@ -1,0 +1,30 @@
+span[data-tooltip]::before {
+    margin-top: 50px;
+    content: attr(data-tooltip);
+    background-color: palegreen;
+    display: block;
+    opacity: 0;
+
+
+
+    margin-left: 3rem;
+
+
+    /* basic styles */
+    width: 120px;
+    height: 10px;
+    padding: 10px 5px;
+    border-radius: 5px;
+    background: #815252;
+    color: #fff;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+span[data-tooltip]:hover::before {
+    opacity: 1;
+}
