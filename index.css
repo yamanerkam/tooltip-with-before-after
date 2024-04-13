@@ -1,7 +1,7 @@
 span[data-tooltip]::before {
     margin-top: 50px;
+    margin-bottom: 5px;
     content: attr(data-tooltip);
-    background-color: palegreen;
     display: block;
     opacity: 0;
 
@@ -23,8 +23,28 @@ span[data-tooltip]::before {
     align-items: center;
 }
 
+span[data-tooltip]::after {
+    content: '';
+    background: #815252;
+    transform: rotate(45deg);
+    display: block;
+    position: absolute;
+    opacity: 0;
+
+    left: 110px;
+    top: 75px;
+    width: 10px;
+    height: 10px;
+
+}
+
+
 
 
 span[data-tooltip]:hover::before {
+    opacity: 1;
+}
+
+span[data-tooltip]:hover::after {
     opacity: 1;
 }
